@@ -19,25 +19,35 @@
     --rose-bg: #FBF0F1;
     --mauve: #7D5A5A;
     --mauve-dk: #4A3030;
-    --cream: #FDF3F4; /* Crema rosada suave */
+    --cream: #FDF3F4;
+    /* Crema rosada suave */
     --white: #FFFFFF;
-    --sage: #C9848A; /* Enlazado a rose-deep para mantener compatibilidad en algunos acentos */
+    --sage: #C9848A;
+    /* Enlazado a rose-deep para mantener compatibilidad en algunos acentos */
     --beige: #C8B99A;
 
     /* Nuevos colores reestructurados hacia tonos rosa */
-    --sage-light: #F6ECEF; /* Rosa blush pálido frío */
-    --sage-pale: #F5DDE0;  /* Blush pálido */
-    --sage-deep-bg: #8F6C70; /* Rosa viejo oscuro / Berry apagado */
-    --sand-bg: #F2E6E8;    /* Lino rosa cálido */
-    --btn-dark-bg: #6B4A4E; /* Berry chocolate oscuro */
+    --sage-light: #F6ECEF;
+    /* Rosa blush pálido frío */
+    --sage-pale: #F5DDE0;
+    /* Blush pálido */
+    --sage-deep-bg: #8F6C70;
+    /* Rosa viejo oscuro / Berry apagado */
+    --sand-bg: #F2E6E8;
+    /* Lino rosa cálido */
+    --btn-dark-bg: #6B4A4E;
+    /* Berry chocolate oscuro */
     --gold-accent: #C5A059;
     --gold-accent-light: #EADCB9;
-    --champagne: #FAF0F2;  /* Champaña rosado suave */
+    --champagne: #FAF0F2;
+    /* Champaña rosado suave */
     --card-shadow: rgba(107, 74, 78, 0.06);
     --card-shadow-hover: rgba(107, 74, 78, 0.12);
 
-    --font-display: 'EB Garamond', serif;        /* equivalente a Centaur */
-    --font-script: 'Great Vibes', cursive;         /* equivalente a Le Jour Script */
+    --font-display: 'EB Garamond', serif;
+    /* equivalente a Centaur */
+    --font-script: 'Great Vibes', cursive;
+    /* equivalente a Le Jour Script */
     --font-body: 'Lato', sans-serif;
 }
 
@@ -566,12 +576,17 @@ nav {
 }
 
 .venue-img-wrap {
+    width: 100%;
     height: 260px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
     background: var(--rose-pale);
-    font-size: 64px;
+}
+
+.venue-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .venue-body {
@@ -954,22 +969,26 @@ footer strong {
 .ceremonia-bg {
     background: radial-gradient(circle at 50% 0%, rgba(200, 185, 154, 0.22) 0%, transparent 70%), var(--champagne) !important;
 }
+
 .recepcion-bg {
     background: radial-gradient(circle at 50% 0%, rgba(138, 158, 138, 0.25) 0%, transparent 70%), var(--sage-light) !important;
 }
+
 .programa-bg {
     background: radial-gradient(circle at 50% 0%, rgba(200, 185, 154, 0.15) 0%, transparent 60%), var(--cream) !important;
 }
+
 .regalos-bg {
     background: radial-gradient(circle at 50% 0%, rgba(232, 180, 184, 0.25) 0%, transparent 75%), var(--rose-bg) !important;
 }
+
 .vestimenta-bg {
     background: var(--cream) !important;
 }
 
 /* ── HÉROE CON MARCO EDITORIAL FINO ── */
 .hero {
-    background: 
+    background:
         radial-gradient(ellipse at 20% 20%, rgba(232, 180, 184, 0.45) 0%, transparent 55%),
         radial-gradient(ellipse at 80% 80%, rgba(201, 132, 138, 0.25) 0%, transparent 55%),
         var(--rose-bg) !important;
@@ -1053,7 +1072,7 @@ footer strong {
 /* ── RSVP DE ALTO CONTRASTE (Verde Salvia Profundo y Tarjeta Blanca) ── */
 .rsvp-section {
     background-color: var(--sage-deep-bg) !important;
-    background-image: 
+    background-image:
         radial-gradient(circle at 50% 25%, rgba(255, 255, 255, 0.08) 0%, transparent 80%),
         url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E") !important;
     padding: 100px 24px !important;
@@ -1099,12 +1118,14 @@ footer strong {
     color: var(--mauve) !important;
 }
 
-.rsvp-form input, .rsvp-form textarea {
+.rsvp-form input,
+.rsvp-form textarea {
     border: 1px solid rgba(138, 158, 138, 0.3) !important;
     background: var(--white) !important;
 }
 
-.rsvp-form input:focus, .rsvp-form textarea:focus {
+.rsvp-form input:focus,
+.rsvp-form textarea:focus {
     border-color: var(--sage) !important;
     box-shadow: 0 0 0 3px rgba(138, 158, 138, 0.15) !important;
 }
@@ -1135,7 +1156,7 @@ footer strong {
 /* ── SAVE THE DATE (Diseño de postal con fondo Arena) ── */
 .std-section {
     background-color: var(--sand-bg) !important;
-    background-image: 
+    background-image:
         radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.35) 0%, transparent 60%),
         url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E") !important;
     padding: 85px 24px !important;
@@ -1200,7 +1221,7 @@ footer strong {
     align-items: center;
     justify-content: center;
     background-color: var(--rose);
-    background-image: 
+    background-image:
         radial-gradient(circle at 50% 50%, rgba(251, 240, 241, 0.72), rgba(232, 180, 184, 0.95)),
         url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
     transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -1374,7 +1395,7 @@ footer strong {
     border-radius: 50%;
     border: none;
     background: radial-gradient(circle at 35% 35%, var(--gold-accent-light) 0%, var(--gold-accent) 60%, var(--mauve-dk) 140%);
-    box-shadow: 
+    box-shadow:
         0 6px 16px rgba(74, 48, 48, 0.35),
         inset 0 -2px 4px rgba(0, 0, 0, 0.2),
         inset 0 2px 4px rgba(255, 255, 255, 0.4);
@@ -1405,7 +1426,7 @@ footer strong {
     width: 82%;
     height: 82%;
     color: rgba(255, 255, 255, 0.9);
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
 }
 
 /* Estado Abierto */
@@ -1438,13 +1459,27 @@ footer strong {
 
 /* Animaciones */
 @keyframes bounceText {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 @keyframes pulseText {
-    0%, 100% { opacity: 0.55; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 @keyframes unfoldCard {
@@ -1453,6 +1488,7 @@ footer strong {
         transform: perspective(1000px) rotateX(-25deg) translateY(40px);
         filter: blur(10px);
     }
+
     100% {
         opacity: 1;
         transform: perspective(1000px) rotateX(0deg) translateY(0);
@@ -1499,14 +1535,24 @@ footer strong {
 }
 
 @keyframes musicPulse {
-    0%, 100% { box-shadow: 0 4px 12px rgba(74, 48, 48, 0.12); }
-    50% { box-shadow: 0 4px 20px rgba(201, 132, 138, 0.4); transform: scale(1.05); }
+
+    0%,
+    100% {
+        box-shadow: 0 4px 12px rgba(74, 48, 48, 0.12);
+    }
+
+    50% {
+        box-shadow: 0 4px 20px rgba(201, 132, 138, 0.4);
+        transform: scale(1.05);
+    }
 }
 
 /* ── REFINAMIENTO DE ELEMENTOS (Mejoras visuales) ── */
 
 /* Tarjetas físicas elegantes con marco de oro fino */
-.venue-card, .gift-card, .dress-card {
+.venue-card,
+.gift-card,
+.dress-card {
     background: var(--white) !important;
     border: 1px solid rgba(200, 185, 154, 0.4) !important;
     box-shadow: 0 8px 25px var(--card-shadow) !important;
@@ -1516,7 +1562,9 @@ footer strong {
 }
 
 /* Marca de agua botánica sutil en las esquinas traseras de las tarjetas */
-.venue-card::before, .gift-card::before, .dress-card::before {
+.venue-card::before,
+.gift-card::before,
+.dress-card::before {
     content: '🌿';
     position: absolute;
     bottom: -15px;
@@ -1526,7 +1574,9 @@ footer strong {
     pointer-events: none;
 }
 
-.venue-card:hover, .gift-card:hover, .dress-card:hover {
+.venue-card:hover,
+.gift-card:hover,
+.dress-card:hover {
     transform: translateY(-4px) !important;
     box-shadow: 0 15px 35px var(--card-shadow-hover) !important;
 }
@@ -1558,11 +1608,15 @@ footer strong {
 }
 
 /* Botones y enlaces con transiciones de suavidad cinemática */
-.btn-primary, .btn-calendar, .btn-directions, .nav-links button {
+.btn-primary,
+.btn-calendar,
+.btn-directions,
+.nav-links button {
     transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
-.btn-primary:hover, .btn-calendar:hover {
+.btn-primary:hover,
+.btn-calendar:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(74, 48, 48, 0.15);
 }
