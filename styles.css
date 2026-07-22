@@ -573,11 +573,15 @@ nav {
     border: 1px solid var(--rose-pale);
     border-radius: 16px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .venue-img-wrap {
     width: 100%;
     height: 260px;
+    min-height: 260px;
+    flex-shrink: 0;
     overflow: hidden;
     background: var(--rose-pale);
 }
@@ -591,6 +595,9 @@ nav {
 
 .venue-body {
     padding: 28px;
+    background: var(--cream);
+    position: relative;
+    z-index: 1;
 }
 
 .venue-time {
