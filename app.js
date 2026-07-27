@@ -11,9 +11,9 @@
       {{nombre}}, {{asistencia}}, {{itinerario}}
    4. Reemplaza los tres valores de abajo con los tuyos.
    ─────────────────────────────────────────────────── */
-const EMAILJS_PUBLIC_KEY = 'TU_PUBLIC_KEY';   // ← reemplaza
-const EMAILJS_SERVICE_ID = 'TU_SERVICE_ID';   // ← reemplaza
-const EMAILJS_TEMPLATE_ID = 'TU_TEMPLATE_ID';  // ← reemplaza
+const EMAILJS_PUBLIC_KEY = '1x3fgFi3mG6kLdYJd';   // ← reemplaza
+const EMAILJS_SERVICE_ID = 'service_6bi7rjs';   // ← reemplaza
+const EMAILJS_TEMPLATE_ID = 'template_xw582uh';  // ← reemplaza
 
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
@@ -144,18 +144,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const envelopeCard = document.getElementById('envelope-card');
     const bgMusic = document.getElementById('bg-music');
     const musicControl = document.getElementById('music-control');
-    
+
     if (!welcomeOverlay || !bgMusic || !musicControl) return;
 
     const soundOn = musicControl.querySelector('.sound-on');
     const soundOff = musicControl.querySelector('.sound-off');
-    
+
     let isEnvelopeOpen = false;
 
     // 1. Clic en el Sello para abrir el sobre
     envelopeSeal.addEventListener('click', (e) => {
         e.stopPropagation(); // Evita que se propague al overlay
-        
+
         // Iniciar música
         playMusicHelper();
 
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Transición y desvanecimiento del overlay de bienvenida
         welcomeOverlay.classList.add('fade-out');
-        
+
         // Mostrar botón flotante de música
         musicControl.style.display = 'flex';
 
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             welcomeOverlay.remove();
             // Scroll al tope nuevamente por si el navegador lo movió
             window.scrollTo({ top: 0, behavior: 'instant' });
-            
+
             // Efecto de entrada "desplegado" en la página principal
             const heroFrame = document.querySelector('.hero-frame');
             if (heroFrame) {
