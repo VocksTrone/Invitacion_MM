@@ -22,9 +22,12 @@
 
 <body>
 
-    <!-- Audio de Fondo (intenta cargar ordinary.mp3 local; fallback al preview de bodas de Alex Warren) -->
-    <audio id="bg-music" loop>
+    <!-- Audio de Fondo (intenta cargar ordinary.mp3 o assets/ordinary.mp3 local; fallback al preview de iTunes) -->
+    <audio id="bg-music" loop preload="auto">
         <source src="ordinary.mp3" type="audio/mpeg">
+        <source src="assets/ordinary.mp3" type="audio/mpeg">
+        <source src="ordinary.m4a" type="audio/mp4">
+        <source src="assets/ordinary.m4a" type="audio/mp4">
         <source
             src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4c/a7/94/4ca794b0-c2e5-a98e-b899-16b601cfa5c0/mzaf_10810306658793568057.plus.aac.p.m4a"
             type="audio/mp4">
